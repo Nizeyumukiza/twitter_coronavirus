@@ -131,3 +131,12 @@ dmypy.json
 # vim
 *.swo 
 *.swp
+
+# outuputs
+./outputs/*
+
+# unnecessary files I used for debugging
+./reduce.md
+
+# reduced files
+#./reduced.*
