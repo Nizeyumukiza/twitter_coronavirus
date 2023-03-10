@@ -133,10 +133,10 @@ dmypy.json
 *.swp
 
 # outuputs
-./outputs/*
+outputs/*
 
 # unnecessary files I used for debugging
-./reduce.md
+reduce.md
 
 # reduced files
 #./reduced.*

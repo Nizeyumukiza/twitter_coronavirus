@@ -17,8 +17,14 @@ total = defaultdict(lambda: Counter())
 for path in args.input_paths:
     with open(path) as f:
         tmp = json.load(f)
+        # combining covid* into one key and corona* into one key
         for k in tmp:
-            total[k] += tmp[k]
+            if 'covid' in k:
+                total['#covid19'] += tmp[k]
+            elif 'corona' in k:
+                total['#corona'] += tmp[k]
+            else:
+                total[k] += tmp[k]
 
 # write the output path
 with open(args.output_path,'w') as f:
