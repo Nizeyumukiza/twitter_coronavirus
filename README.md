@@ -184,4 +184,6 @@ I'm more concerned with your ability to write a shell script and use `nohup`, `&
 ## Reflection
 
 In this lab I got to work with a big data set. The dataset consist all geo tagged tweets from 2022. Even though most of them has `place` key which in return has `country_code` key. However some of them don't have one or both of the keys, I gave them an `unrecognized` key. Same aapplies to `.lang` from the mapping outputs; if there were no `lang` key, I gave that tweet `uncategorized_lang`. Of course twese "uncategorized" tweets are from somewhere and written in some language. However, the machine cannnot figure out that. Using these keys helps to track those untaged tweets.
-
+ ```bash
+    cat ./visuals/top_ten/ten#corona.lang
+ ```
