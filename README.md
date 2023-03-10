@@ -184,7 +184,10 @@ I'm more concerned with your ability to write a shell script and use `nohup`, `&
 ## Reflection
 
 In this lab I got to work with a big data set. The dataset consist all geo tagged tweets from 2022. Even though most of them has `place` key which in return has `country_code` key. However some of them don't have one or both of the keys, I gave them an `uncategorized` key. Same aapplies to `.lang` from the mapping outputs; if there were no `lang` key, I gave that tweet `uncategorized_lang`. Of course twese "uncategorized" tweets are from somewhere and written in some language. However, the machine cannnot figure out that. Using these keys helps to track those untaged tweets. However, for some code in implementation, after running `map.py`, those keys either became `null` or ` `. This could be fixed in the future.
+
 After mapping, I reduced all results by totalling the values of a `hashtag` across all `keys`. At this level I realized there are some `hashtags` that are better combined. For instance my code combine hashtags `#coronavirus` and `#corona` into one key `#corona` for final results. I also combined hashtags that have "covid" word in them into one hashtag `#covid19`. Then reduced both "language" and "country" level into `.lang` and `.country` respectively for each hashtag.
+
+I wrote scripting files for each of the three tasks: `run_map.sh`, `reduce.sh` and `visualize.sh` to automate the the whole process of mapping to reducing then visualizing.
 
 I realized showing like top ten results would be useful to see where of in which languages a certain hashtag was used a lot. This might help in interpretation of the data like may be in that country people are talking about covid a lot. The following command would give you the top most languages that are using `#corona` 
  ```bash  cat ./visuals/top_ten/ten#corona.lang```.
