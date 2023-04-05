@@ -189,34 +189,11 @@ After mapping, I reduced all results by totalling the values of a `hashtag` acro
 
 I wrote scripting files for each of the three tasks: `run_map.sh`, `reduce.sh` and `visualize.sh` to automate the the whole process of mapping to reducing then visualizing.
 
-I realized showing like top ten results would be useful to see where of in which languages a certain hashtag was used a lot. This might help in interpretation of the data like may be in that country people are talking about covid a lot. The following command would give you the top most languages that are using `#corona` 
- ```bash  cat ./visuals/top_ten/ten#corona.lang```.
-`Top ten languages
-en : 952158
-es : 286444
-und : 254444
-pt : 67082
-tr : 66974
-it : 63983
-fr : 55896
-hi : 50795
-de : 50674
-nl : 38099
-`
+I realized plotting like top ten results would be useful to see where of in which languages a certain hashtag was used a lot. This might help in interpretation of the data like may be in that country people are talking about covid a lot.
+The following pictures are for `#corona`(I combined corona and coronavirus hashtags to count for corona) and `#코로나바이러스` in top ten languages.
+[!alt text] (https://github.com/Nizeyumukiza/twitter_coronavirus/blob/master/visuals/figs/corona_lang.png)
+[!alt text] (https://github.com/Nizeyumukiza/twitter_coronavirus/blob/master/visuals/figs/%23%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4_lang.png)
 
-Or ```bash  cat ./visuals/top_ten/ten#corona.country``` to get the top ten countries that used `#corona`
-`Top ten countries 
-US : 491334
-IN : 246130
-GB : 147078
-ES : 83740
-TR : 79429
-IT : 76597
-BR : 73339
-AR : 62957
-DE : 56107
-MX : 51864
-`
 
 ### Further explorations
 1. Someone would translate korean, chinese, and japanese hashtags and match them to the english hashtags to get overall total all over the world.
