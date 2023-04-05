@@ -191,9 +191,12 @@ I wrote scripting files for each of the three tasks: `run_map.sh`, `reduce.sh` a
 
 I realized plotting like top ten results would be useful to see where of in which languages a certain hashtag was used a lot. This might help in interpretation of the data like may be in that country people are talking about covid a lot.
 The following pictures are for `#corona`(I combined corona and coronavirus hashtags to count for corona) and `#코로나바이러스` in top ten languages.
-[!alt text] (https://github.com/Nizeyumukiza/twitter_coronavirus/blob/master/visuals/figs/corona_lang.png)
-[!alt text] (https://github.com/Nizeyumukiza/twitter_coronavirus/blob/master/visuals/figs/%23%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4_lang.png)
+<img src=https://github.com/Nizeyumukiza/twitter_coronavirus/blob/master/visuals/figs/corona_lang.png  width=100% />
+<img src=https://github.com/Nizeyumukiza/twitter_coronavirus/blob/master/visuals/figs/%23%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4_lang.png width=100% />
 
+The following pictures are for `#corona`(I combined corona and coronavirus h    ashtags to count for corona) and `#코로나바이러스` in top ten countries.
+<img src=https://github.com/Nizeyumukiza/twitter_coronavirus/blob/master/visuals/figs/corona_country.png width=100% />
+<img src=https://github.com/Nizeyumukiza/twitter_coronavirus/blob/master/visuals/figs/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4_country.png  width=100% />
 
 ### Further explorations
 1. Someone would translate korean, chinese, and japanese hashtags and match them to the english hashtags to get overall total all over the world.
