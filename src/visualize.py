@@ -6,6 +6,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--input_path',required=True)
 parser.add_argument('--key',required=True)
 parser.add_argument('--percent',action='store_true')
+parser.add_argument('--filename', required=True)
 args = parser.parse_args()
 
 # imports
@@ -40,6 +41,4 @@ plt.bar(keys, values)
 plt.xlabel('data keys')
 plt.ylabel('frequency of the keys in the data')
 plt.title("Bar chat of key and it's frequency.")
-plt.rcParams['savefig.directory'] = '../visuals/figs'
-plt.savefig(f"'{args.key}.png'" , dpi=300, format='png')
-
+plt.savefig('./visuals/figs/'+f"{args.filename}.png", format='png')
