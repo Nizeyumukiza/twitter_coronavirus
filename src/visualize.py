@@ -25,13 +25,21 @@ if args.percent:
 
 # print the count values
 items = sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]), reverse=True)
-top_ten = sorted(items[:11] or items.most_common(10), reverse=False)
-keys = list(top_ten.keys())
-values = list(top_ten.values())
+top_ten = items[:10]
+keys = []
+values = []
+for k,v in top_ten:
+    keys.append(k)
+    values.append(v)
+keys.reverse()
+values.reverse()
+print(keys)
+print(values)
+fig = plt.figure(figsize = (10,5))
 plt.bar(keys, values)
 plt.xlabel('data keys')
 plt.ylabel('frequency of the keys in the data')
 plt.title("Bar chat of key and it's frequency.")
-plt.savefig('../visuals/figs',dpi='figure', format='png')
-for k,v in items:
-    print(k,':',v)
+plt.rcParams['savefig.directory'] = '../visuals/figs'
+plt.savefig(f"'{args.key}.png'" , dpi=300, format='png')
+
